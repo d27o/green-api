@@ -29,6 +29,17 @@ npm run build
 npm run preview
 ```
 
+## GitHub Pages
+
+Адрес сайта после публикации: https://d27o.github.io/green-api/
+
+В настройках репозитория откройте **Settings → Pages → Build and deployment**
+и выберите **Source: GitHub Actions**. Workflow `.github/workflows/deploy.yml`
+проверяет код, собирает приложение и публикует `dist` при каждом push в `main`.
+Его также можно запустить вручную через **Actions → Deploy to GitHub Pages → Run workflow**.
+
+Для размещения в подпапке репозитория в `vite.config.ts` задан `base: '/green-api/'`.
+
 ## Подготовка GREEN-API
 
 1. Создайте и авторизуйте Telegram-инстанс в личном кабинете GREEN-API.
